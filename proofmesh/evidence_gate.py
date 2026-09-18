@@ -102,7 +102,11 @@ class EvidenceGate:
         # 3. Check for query-evidence lexical / keyword relevance overlap
         query_words = set(re.findall(r'\b[a-zA-Z0-9]{3,}\b', user_query.lower()))
         # Remove common stop words
-        stop_words = {"what", "when", "where", "which", "who", "whom", "this", "that", "these", "those", "have", "with", "from", "does", "about"}
+        stop_words = {
+            "what", "when", "where", "which", "who", "whom", "this", "that", "these",
+            "those", "have", "with", "from", "does", "about", "the", "and", "for",
+            "are", "was", "were", "can", "how", "has", "had", "its", "not", "but"
+        }
         query_words = query_words - stop_words
 
         if query_words:
