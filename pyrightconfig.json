@@ -1,0 +1,23 @@
+{
+  "include": [
+    "."
+  ],
+  "exclude": [
+    "**/__pycache__",
+    "**/.pytest_cache",
+    "**/*.pyc"
+  ],
+  "extraPaths": [
+    ".",
+    "proofmesh",
+    "person1_dense_retrieval/src",
+    "person2_hybrid_retrieval/src",
+    "person2_hybrid_retrieval/benchmarks"
+  ],
+  "pythonVersion": "3.13",
+  "typeCheckingMode": "basic",
+  "reportMissingModuleSource": "none",
+  "reportMissingImports": "none",
+  "reportUnusedImport": "none",
+  "useLibraryCodeForTypes": true
+}

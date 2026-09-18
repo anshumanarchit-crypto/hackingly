@@ -1,0 +1,18 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+.env
+.pytest_cache/
+*.log
+.DS_Store
+Thumbs.db
+
+# PII Vault SQLite runtime databases
+pii_vault.db
+pii_vault.db-*
+*.db

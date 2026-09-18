@@ -1,0 +1,16 @@
+# Python cache & artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Pytest cache
+.pytest_cache/
+
+# Local virtual environment
+.venv/
+env/
+venv/
+
+# Local Hugging Face / model caches
+.cache/
+models/
