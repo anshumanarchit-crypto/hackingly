@@ -29,7 +29,7 @@ from proofmesh.pii.export import generate_export
 # 1. Page Configuration & Theme
 # -----------------------------------------------------------------------------
 st.set_page_config(
-    page_title="ProofMesh | Evidence-Bound AI Workspace",
+    page_title="VeriDoc AI | Evidence-Bound AI Workspace",
     page_icon="🛡️",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -231,7 +231,7 @@ st.markdown(
         box-shadow: 0 4px 20px rgba(129, 140, 248, 0.35) !important;
     }
 
-    /* Primary Button (Ask ProofMesh) */
+    /* Primary Button (Ask VeriDoc AI) */
     .stButton > button[kind="primary"], button[data-testid="baseButton-primary"] {
         background: linear-gradient(135deg, #4f46e5 0%, #6366f1 50%, #7c3aed 100%) !important;
         color: #ffffff !important;
@@ -509,7 +509,7 @@ if not st.session_state.indexed_docs:
 # 3. Sidebar: Control & System Context
 # -----------------------------------------------------------------------------
 with st.sidebar:
-    st.markdown("### 🛡️ ProofMesh Control")
+    st.markdown("### 🛡️ VeriDoc AI Control")
     st.caption("Privacy-First Offline Intelligence")
     st.markdown("---")
 
@@ -605,7 +605,7 @@ with st.sidebar:
         if history_records:
             try:
                 file_bytes, media_type, filename = generate_export(
-                    session_id="proofmesh_workspace",
+                    session_id="veridoc_workspace",
                     format_type=export_fmt,
                     redact=export_redact,
                     conversation_history=history_records,
@@ -624,7 +624,7 @@ with st.sidebar:
             st.info("Submit at least one question before exporting.")
 
     st.markdown("---")
-    st.caption("ProofMesh v1.0.0 | Offline CPU Architecture")
+    st.caption("VeriDoc AI v1.0.0 | Offline CPU Architecture")
 
 
 # -----------------------------------------------------------------------------
@@ -658,7 +658,7 @@ st.markdown(
             </div>
             <div>
                 <div class="pm-title-row">
-                    <h1 class="pm-title">ProofMesh</h1>
+                    <h1 class="pm-title">VeriDoc AI</h1>
                     <span class="pm-version-tag">OFFLINE RAG</span>
                 </div>
                 <p class="pm-tagline">Evidence-Bound Grounding & Deterministic Privacy Shield Workspace</p>
@@ -737,7 +737,7 @@ with st.form("query_composer_form", clear_on_submit=False):
     )
     col_sub1, col_sub2 = st.columns([1, 4])
     with col_sub1:
-        submit_btn = st.form_submit_button("Ask ProofMesh ⚡", use_container_width=True, type="primary")
+        submit_btn = st.form_submit_button("Ask VeriDoc AI ⚡", use_container_width=True, type="primary")
     with col_sub2:
         if default_q:
             st.caption(f"Active preset: *{default_q}*")
@@ -751,7 +751,7 @@ if submit_btn and query_input.strip():
     active_query = query_input.strip()
 
     # Stage-based real progress indicator
-    with st.status("ProofMesh Multi-Tier Defense Pipeline Executing...", expanded=True) as status_box:
+    with st.status("VeriDoc AI Multi-Tier Defense Pipeline Executing...", expanded=True) as status_box:
         st.write("🔍 **Phase 1: Hybrid Retrieval** — Fusing BM25 lexical ranking and dense vector embeddings...")
         time.sleep(0.1)
 
@@ -841,7 +841,7 @@ if st.session_state.current_result:
                 </div>
                 <p style="color: #cbd5e1; font-size: 14px; line-height: 1.65; margin-bottom: 14px;">
                     The retrieved evidence contains direct, irreconcilable factual conflicts.
-                    <strong>ProofMesh deterministic evidence gate intercepted the request</strong> to prevent the model from arbitrarily guessing or fabricating an answer.
+                    <strong>VeriDoc AI deterministic evidence gate intercepted the request</strong> to prevent the model from arbitrarily guessing or fabricating an answer.
                 </p>
             </div>
             """,
@@ -903,7 +903,7 @@ if st.session_state.current_result:
                     <span class="badge" style="background: rgba(245, 158, 11, 0.15); color: #fde68a; border: 1px solid rgba(245, 158, 11, 0.35);">Factual Abstention</span>
                 </div>
                 <p style="color: #cbd5e1; font-size: 14px; line-height: 1.65; margin-bottom: 12px;">
-                    ProofMesh could not find sufficient verifiable evidence in the active document corpus to answer this question.
+                    VeriDoc AI could not find sufficient verifiable evidence in the active document corpus to answer this question.
                     The system intentionally abstains rather than producing an ungrounded hallucination.
                 </p>
                 <div class="topics-box">
